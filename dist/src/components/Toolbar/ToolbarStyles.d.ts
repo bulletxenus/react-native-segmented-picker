@@ -10,10 +10,10 @@ declare const _default: {
     toolbarTitleContainer: {
         height: string;
         paddingLeft: number;
-        justifyContent: "center";
     };
     closeButton: {
         width: string;
+        marginLeft: string;
     };
     toolbarConfirmText: {
         fontWeight: "bold";
