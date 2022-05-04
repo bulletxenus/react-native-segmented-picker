@@ -116,7 +116,8 @@ var styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    marginBottom: '15%'
   },
   selectableArea: {
     flex: 1,
@@ -1096,7 +1097,7 @@ class SegmentedPicker extends Component {
       /*#__PURE__*/
       React.createElement(View, {
         style: [styles.closeableContainer, {
-          height: `${(100 - size * 100) / 2}%`
+          height: `${100 - size * 100}%`
         }]
       })),
       /*#__PURE__*/

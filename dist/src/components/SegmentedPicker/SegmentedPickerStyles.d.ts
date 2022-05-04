@@ -14,6 +14,7 @@ declare const _default: {
         flex: number;
         flexDirection: "column";
         alignItems: "flex-start";
+        marginBottom: string;
     };
     selectableArea: {
         flex: number;

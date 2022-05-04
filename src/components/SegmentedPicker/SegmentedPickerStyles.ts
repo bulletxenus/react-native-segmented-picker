@@ -26,6 +26,7 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'flex-start',
+    marginBottom: '15%'
   },
 
   selectableArea: {
