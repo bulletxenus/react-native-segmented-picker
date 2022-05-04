@@ -179,8 +179,7 @@ var styles$1 = StyleSheet.create({
     paddingLeft: 30
   },
   closeButton: {
-    width: '10%',
-    marginLeft: '5%'
+    width: '10%'
   },
   toolbarConfirmText: {
     fontWeight: 'bold',
@@ -227,7 +226,8 @@ React.createElement(View, {
 React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
     color: confirmTextColor,
-    fontSize: 25
+    fontSize: 25,
+    marginLeft: '5%'
   }]
 }, "x"))),
 /*#__PURE__*/

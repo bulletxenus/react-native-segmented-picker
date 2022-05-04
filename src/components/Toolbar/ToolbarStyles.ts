@@ -18,7 +18,6 @@ export default StyleSheet.create({
 
   closeButton: {
     width: '10%',
-    marginLeft: '5%',
   },
 
   toolbarConfirmText: {
