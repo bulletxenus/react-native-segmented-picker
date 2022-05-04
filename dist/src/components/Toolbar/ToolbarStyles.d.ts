@@ -9,7 +9,7 @@ declare const _default: {
     };
     toolbarTitleContainer: {
         width: string;
-        paddingLeft: number;
+        alignItems: "center";
     };
     closeButton: {
         width: string;

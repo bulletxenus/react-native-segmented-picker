@@ -176,7 +176,7 @@ var styles$1 = StyleSheet.create({
   },
   toolbarTitleContainer: {
     width: '80%',
-    paddingLeft: 30
+    alignItems: 'center'
   },
   closeButton: {
     width: '20%',
@@ -243,8 +243,7 @@ React.createElement(View, {
 /*#__PURE__*/
 React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
-    color: confirmTextColor,
-    alignItems: 'center'
+    color: confirmTextColor
   }]
 }, titleText)))));
 
