@@ -226,7 +226,7 @@ React.createElement(View, {
 React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
     color: confirmTextColor,
-    fontSize: 25,
+    fontSize: 50,
     marginLeft: '5%'
   }]
 }, "x"))),
