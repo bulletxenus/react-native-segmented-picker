@@ -65,6 +65,7 @@ export interface Props {
   onValueChange: (event: SelectionEvent) => void;
   onCancel: (event: Selections) => void,
   onConfirm: (event: Selections) => void,
+  onClose: () => void,
 }
 
 interface State {
@@ -571,6 +572,19 @@ export default class SegmentedPicker extends Component<Props, State> {
 
   /**
    * @private
+   * This method is called when the right action button (default: "Done") is tapped.
+   * It calls the `onClose` method and hides the picker.
+   * @return {Promise<void>}
+   */
+  private onClose = async (): Promise<void> => {
+    if (this.props.visible !== true) {
+      await this.hide();
+    }
+    this.props.onClose();
+  };
+
+  /**
+   * @private
    * Used by the FlatList to render picklist items.
    * @return {ReactElement}
    */
@@ -677,6 +691,8 @@ export default class SegmentedPicker extends Component<Props, State> {
               toolbarBackground={toolbarBackgroundColor}
               toolbarBorderColor={toolbarBorderColor}
               onConfirm={this.onConfirm}
+              onClose={this.onClose}
+
             />
 
             <View style={styles.selectableArea}>

@@ -9,6 +9,8 @@ interface Props {
   toolbarBackground: string;
   toolbarBorderColor: string;
   onConfirm: () => void;
+  onClose: () => void;
+
 }
 
 /**
@@ -21,6 +23,7 @@ export default ({
   toolbarBackground,
   toolbarBorderColor,
   onConfirm,
+  onClose,
 }: Props): ReactElement => (
   <View
     style={[
@@ -44,7 +47,7 @@ export default ({
     </TouchableOpacity>
     <TouchableOpacity
       activeOpacity={0.4}
-      onPress={onConfirm}
+      onPress={onClose}
       testID={TEST_IDS.CONFIRM_BUTTON}
     >
       <View style={styles.toolbarConfirmContainer}>

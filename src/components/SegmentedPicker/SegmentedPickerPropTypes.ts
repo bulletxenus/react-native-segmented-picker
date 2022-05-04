@@ -18,6 +18,7 @@ export const defaultProps = {
   onValueChange: () => {},
   onCancel: () => {},
   onConfirm: () => {},
+  onClose: () => {},
 };
 
 export const propTypes = {
@@ -78,4 +79,5 @@ export const propTypes = {
   onValueChange: PropTypes.func,
   onCancel: PropTypes.func,
   onConfirm: PropTypes.func,
+  onClose: PropTypes.func,
 };

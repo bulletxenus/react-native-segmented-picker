@@ -20,6 +20,7 @@ export interface Props {
     onValueChange: (event: SelectionEvent) => void;
     onCancel: (event: Selections) => void;
     onConfirm: (event: Selections) => void;
+    onClose: () => void;
 }
 interface State {
     visible: boolean;
@@ -55,6 +56,7 @@ export default class SegmentedPicker extends Component<Props, State> {
         onValueChange: import("prop-types").Requireable<(...args: any[]) => any>;
         onCancel: import("prop-types").Requireable<(...args: any[]) => any>;
         onConfirm: import("prop-types").Requireable<(...args: any[]) => any>;
+        onClose: import("prop-types").Requireable<(...args: any[]) => any>;
     };
     static defaultProps: Partial<Props>;
     /**
@@ -255,6 +257,13 @@ export default class SegmentedPicker extends Component<Props, State> {
      * @return {Promise<void>}
      */
     private onConfirm;
+    /**
+     * @private
+     * This method is called when the right action button (default: "Done") is tapped.
+     * It calls the `onClose` method and hides the picker.
+     * @return {Promise<void>}
+     */
+    private onClose;
     /**
      * @private
      * Used by the FlatList to render picklist items.

@@ -17,6 +17,7 @@ export declare const defaultProps: {
     onValueChange: () => void;
     onCancel: () => void;
     onConfirm: () => void;
+    onClose: () => void;
 };
 export declare const propTypes: {
     options: PropTypes.Validator<(PropTypes.InferProps<{
@@ -47,4 +48,5 @@ export declare const propTypes: {
     onValueChange: PropTypes.Requireable<(...args: any[]) => any>;
     onCancel: PropTypes.Requireable<(...args: any[]) => any>;
     onConfirm: PropTypes.Requireable<(...args: any[]) => any>;
+    onClose: PropTypes.Requireable<(...args: any[]) => any>;
 };

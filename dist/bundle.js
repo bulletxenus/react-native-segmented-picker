@@ -20,7 +20,8 @@ const defaultProps = {
   backgroundColor: '#FFFFFF',
   onValueChange: () => {},
   onCancel: () => {},
-  onConfirm: () => {}
+  onConfirm: () => {},
+  onClose: () => {}
 };
 const propTypes = {
   // Core Props
@@ -58,7 +59,8 @@ const propTypes = {
   // Events
   onValueChange: PropTypes.func,
   onCancel: PropTypes.func,
-  onConfirm: PropTypes.func
+  onConfirm: PropTypes.func,
+  onClose: PropTypes.func
 };
 
 /**
@@ -196,7 +198,8 @@ var Toolbar = (({
   confirmTextColor,
   toolbarBackground,
   toolbarBorderColor,
-  onConfirm
+  onConfirm,
+  onClose
 }) =>
 /*#__PURE__*/
 React.createElement(View, {
@@ -224,7 +227,7 @@ React.createElement(Text, {
 /*#__PURE__*/
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,
-  onPress: onConfirm,
+  onPress: onClose,
   testID: TEST_IDS.CONFIRM_BUTTON
 },
 /*#__PURE__*/
@@ -932,6 +935,21 @@ class SegmentedPicker extends Component {
     };
     /**
      * @private
+     * This method is called when the right action button (default: "Done") is tapped.
+     * It calls the `onClose` method and hides the picker.
+     * @return {Promise<void>}
+     */
+
+
+    this.onClose = async () => {
+      if (this.props.visible !== true) {
+        await this.hide();
+      }
+
+      this.props.onClose();
+    };
+    /**
+     * @private
      * Used by the FlatList to render picklist items.
      * @return {ReactElement}
      */
@@ -1109,7 +1127,8 @@ class SegmentedPicker extends Component {
         confirmTextColor: confirmTextColor,
         toolbarBackground: toolbarBackgroundColor,
         toolbarBorderColor: toolbarBorderColor,
-        onConfirm: this.onConfirm
+        onConfirm: this.onConfirm,
+        onClose: this.onClose
       }),
       /*#__PURE__*/
       React.createElement(View, {
