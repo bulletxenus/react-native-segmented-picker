@@ -171,7 +171,6 @@ var styles$1 = StyleSheet.create({
     height: 42,
     borderBottomWidth: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'flex-start'
   },
@@ -225,9 +224,9 @@ React.createElement(View, {
 React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
     color: confirmTextColor,
-    fontSize: 30
+    fontSize: 25
   }]
-}, "x0x0"))),
+}, "x"))),
 /*#__PURE__*/
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,

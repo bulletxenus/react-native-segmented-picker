@@ -42,8 +42,8 @@ export default ({
       testID={TEST_IDS.CONFIRM_BUTTON}
     >
       <View style={styles.toolbarConfirmContainer}>
-        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, fontSize: 30 }]}>
-          x0x0
+        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, fontSize: 25 }]}>
+          x
         </Text>
       </View>
     </TouchableOpacity>
