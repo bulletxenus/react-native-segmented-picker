@@ -297,9 +297,7 @@ React.createElement(View, {
 },
 /*#__PURE__*/
 React.createElement(Text, {
-  style: [styles$2.toolbarConfirmText, {
-    color: confirmTextColor
-  }]
+  style: [styles$2.toolbarConfirmText]
 }, "Bottom Bar")))));
 
 const ITEM_HEIGHT$1 = Platform.select(ITEM_HEIGHTS);
