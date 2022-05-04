@@ -43,7 +43,7 @@ export default ({
     >
       <View style={styles.toolbarConfirmContainer}>
         <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, fontSize: 30 }]}>
-          x
+          x0x0
         </Text>
       </View>
     </TouchableOpacity>

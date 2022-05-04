@@ -227,7 +227,7 @@ React.createElement(Text, {
     color: confirmTextColor,
     fontSize: 30
   }]
-}, "x"))),
+}, "x0x0"))),
 /*#__PURE__*/
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,
