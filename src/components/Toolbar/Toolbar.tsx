@@ -53,7 +53,7 @@ export default ({
       testID={TEST_IDS.CONFIRM_BUTTON}
     >
       <View style={styles.toolbarTitleContainer}>
-        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, alignItems: 'center' }]}>
+        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor }]}>
           {titleText}
         </Text>
       </View>

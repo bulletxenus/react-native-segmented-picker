@@ -13,7 +13,7 @@ export default StyleSheet.create({
 
   toolbarTitleContainer: {
     width: '80%',
-    paddingLeft: 30,
+    alignItems: 'center',
   },
 
   closeButton: {
