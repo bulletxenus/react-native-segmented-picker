@@ -273,7 +273,7 @@ var styles$2 = StyleSheet.create({
 
 var Bottombar = (({
   confirmText,
-  confirmTextColor,
+  bottomBarColor,
   toolbarBackground,
   toolbarBorderColor,
   onConfirm
@@ -297,7 +297,9 @@ React.createElement(View, {
 },
 /*#__PURE__*/
 React.createElement(Text, {
-  style: [styles$2.toolbarConfirmText]
+  style: [styles$2.toolbarConfirmText, {
+    color: '#0A84FF'
+  }]
 }, "Bottom Bar")))));
 
 const ITEM_HEIGHT$1 = Platform.select(ITEM_HEIGHTS);

@@ -5,7 +5,7 @@ import { TEST_IDS } from '../../config/constants';
 
 interface Props {
   confirmText: string;
-  confirmTextColor: string;
+  bottomBarColor: string;
   toolbarBackground: string;
   toolbarBorderColor: string;
   onConfirm: () => void;
@@ -19,7 +19,7 @@ interface Props {
  */
 export default ({
   confirmText,
-  confirmTextColor,
+  bottomBarColor,
   toolbarBackground,
   toolbarBorderColor,
   onConfirm,
@@ -39,7 +39,7 @@ export default ({
       testID={TEST_IDS.CONFIRM_BUTTON}
     >
       <View style={styles.toolbarConfirmContainer}>
-        <Text style={[styles.toolbarConfirmText]}>
+        <Text style={[styles.toolbarConfirmText, { color: '#0A84FF' }]}>
           Bottom Bar
         </Text>
       </View>
