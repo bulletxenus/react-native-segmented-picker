@@ -8,11 +8,12 @@ declare const _default: {
         alignSelf: "flex-start";
     };
     toolbarTitleContainer: {
-        height: string;
+        width: string;
         paddingLeft: number;
     };
     closeButton: {
         width: string;
+        paddingLeft: string;
     };
     toolbarConfirmText: {
         fontWeight: "bold";

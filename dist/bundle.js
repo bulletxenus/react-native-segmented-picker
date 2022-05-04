@@ -175,11 +175,12 @@ var styles$1 = StyleSheet.create({
     alignSelf: 'flex-start'
   },
   toolbarTitleContainer: {
-    height: '80%',
+    width: '80%',
     paddingLeft: 30
   },
   closeButton: {
-    width: '10%'
+    width: '20%',
+    paddingLeft: '5%'
   },
   toolbarConfirmText: {
     fontWeight: 'bold',
@@ -226,8 +227,7 @@ React.createElement(View, {
 React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
     color: confirmTextColor,
-    fontSize: 50,
-    marginLeft: '5%'
+    fontSize: 25
   }]
 }, "x"))),
 /*#__PURE__*/

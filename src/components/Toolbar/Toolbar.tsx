@@ -42,7 +42,7 @@ export default ({
       testID={TEST_IDS.CONFIRM_BUTTON}
     >
       <View style={styles.closeButton}>
-        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, fontSize: 50, marginLeft: '5%' }]}>
+        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, fontSize: 25 }]}>
           x
         </Text>
       </View>
