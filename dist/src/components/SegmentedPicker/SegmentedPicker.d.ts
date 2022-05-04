@@ -9,6 +9,7 @@ export interface Props {
     defaultSelections: Selections;
     size: number;
     confirmText: string;
+    titleText: string;
     nativeTestID: string;
     confirmTextColor: string;
     pickerItemTextColor: string;
@@ -45,6 +46,7 @@ export default class SegmentedPicker extends Component<Props, State> {
         }>;
         size: (props: any, propName: "size", componentName: string) => Error | null;
         confirmText: import("prop-types").Requireable<string>;
+        titleText: import("prop-types").Requireable<string>;
         nativeTestID: import("prop-types").Requireable<string>;
         confirmTextColor: import("prop-types").Requireable<string>;
         pickerItemTextColor: import("prop-types").Requireable<string>;

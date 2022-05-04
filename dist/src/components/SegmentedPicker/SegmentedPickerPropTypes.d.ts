@@ -6,6 +6,7 @@ export declare const defaultProps: {
     defaultSelections: {};
     size: number;
     confirmText: string;
+    titleText: string;
     nativeTestID: undefined;
     confirmTextColor: string;
     pickerItemTextColor: string;
@@ -37,6 +38,7 @@ export declare const propTypes: {
     }>;
     size: (props: any, propName: "size", componentName: string) => Error | null;
     confirmText: PropTypes.Requireable<string>;
+    titleText: PropTypes.Requireable<string>;
     nativeTestID: PropTypes.Requireable<string>;
     confirmTextColor: PropTypes.Requireable<string>;
     pickerItemTextColor: PropTypes.Requireable<string>;

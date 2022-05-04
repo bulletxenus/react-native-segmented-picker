@@ -10,6 +10,7 @@ const defaultProps = {
   defaultSelections: {},
   size: 0.45,
   confirmText: 'Done',
+  titleText: '',
   nativeTestID: undefined,
   confirmTextColor: '#0A84FF',
   pickerItemTextColor: '#282828',
@@ -47,6 +48,7 @@ const propTypes = {
     return value < 0 || value > 1 ? new Error(`Invalid prop \`${propName}\` supplied to \`${componentName}\`.` + ' Must be a floating point between 0-1 representing the screen percentage to cover.' + ' The default value is `0.45` (eg 45%).') : null;
   },
   confirmText: PropTypes.string,
+  titleText: PropTypes.string,
   nativeTestID: PropTypes.string,
   // Styling
   confirmTextColor: PropTypes.string,
@@ -195,6 +197,7 @@ var styles$1 = StyleSheet.create({
 
 var Toolbar = (({
   confirmText,
+  titleText,
   confirmTextColor,
   toolbarBackground,
   toolbarBorderColor,
@@ -221,7 +224,8 @@ React.createElement(View, {
 /*#__PURE__*/
 React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
-    color: confirmTextColor
+    color: confirmTextColor,
+    fontSize: 30
   }]
 }, "x"))),
 /*#__PURE__*/
@@ -239,7 +243,7 @@ React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
     color: confirmTextColor
   }]
-}, confirmText)))));
+}, titleText)))));
 
 var styles$2 = StyleSheet.create({
   toolbarContainer: {
@@ -273,7 +277,6 @@ var styles$2 = StyleSheet.create({
 
 var Bottombar = (({
   confirmText,
-  bottomBarColor,
   toolbarBackground,
   toolbarBorderColor,
   onConfirm
@@ -300,7 +303,7 @@ React.createElement(Text, {
   style: [styles$2.toolbarConfirmText, {
     color: '#0A84FF'
   }]
-}, "Bottom Bar")))));
+}, confirmText)))));
 
 const ITEM_HEIGHT$1 = Platform.select(ITEM_HEIGHTS);
 var styles$3 = StyleSheet.create({
@@ -1120,6 +1123,7 @@ class SegmentedPicker extends Component {
       defaultSelections,
       size,
       confirmText,
+      titleText,
       confirmTextColor,
       pickerItemTextColor,
       toolbarBackgroundColor,
@@ -1185,6 +1189,7 @@ class SegmentedPicker extends Component {
       /*#__PURE__*/
       React.createElement(Toolbar, {
         confirmText: confirmText,
+        titleText: titleText,
         confirmTextColor: confirmTextColor,
         toolbarBackground: toolbarBackgroundColor,
         toolbarBorderColor: toolbarBorderColor,
@@ -1285,7 +1290,6 @@ class SegmentedPicker extends Component {
       /*#__PURE__*/
       React.createElement(Bottombar, {
         confirmText: confirmText,
-        confirmTextColor: confirmTextColor,
         toolbarBackground: toolbarBackgroundColor,
         toolbarBorderColor: toolbarBorderColor,
         onConfirm: this.onConfirm,

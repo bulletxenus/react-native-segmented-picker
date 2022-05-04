@@ -53,6 +53,7 @@ export interface Props {
   defaultSelections: Selections;
   size: number;
   confirmText: string;
+  titleText: string;
   nativeTestID: string;
   // Styling
   confirmTextColor: string;
@@ -642,6 +643,7 @@ export default class SegmentedPicker extends Component<Props, State> {
       defaultSelections,
       size,
       confirmText,
+      titleText,
       confirmTextColor,
       pickerItemTextColor,
       toolbarBackgroundColor,
@@ -688,6 +690,7 @@ export default class SegmentedPicker extends Component<Props, State> {
           >
             <Toolbar
               confirmText={confirmText}
+              titleText={titleText}
               confirmTextColor={confirmTextColor}
               toolbarBackground={toolbarBackgroundColor}
               toolbarBorderColor={toolbarBorderColor}
@@ -784,7 +787,6 @@ export default class SegmentedPicker extends Component<Props, State> {
             </View>
             <BottomBar
               confirmText={confirmText}
-              confirmTextColor={confirmTextColor}
               toolbarBackground={toolbarBackgroundColor}
               toolbarBorderColor={toolbarBorderColor}
               onConfirm={this.onConfirm}
