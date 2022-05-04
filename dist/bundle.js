@@ -950,7 +950,7 @@ class SegmentedPicker extends Component {
           style: [styles.pickerItemText, {
             color: pickerItemTextColor
           }]
-        }, label)))
+        }, "chicen nuggets")))
       );
     };
     /**
