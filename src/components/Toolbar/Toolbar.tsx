@@ -36,18 +36,18 @@ export default ({
   >
     <TouchableOpacity
       activeOpacity={0.4}
-      onPress={onConfirm}
+      onPress={onClose}
       testID={TEST_IDS.CONFIRM_BUTTON}
     >
       <View style={styles.toolbarConfirmContainer}>
         <Text style={[styles.toolbarConfirmText, { color: confirmTextColor }]}>
-          {confirmText}
+          x
         </Text>
       </View>
     </TouchableOpacity>
     <TouchableOpacity
       activeOpacity={0.4}
-      onPress={onClose}
+      onPress={onConfirm}
       testID={TEST_IDS.CONFIRM_BUTTON}
     >
       <View style={styles.toolbarConfirmContainer}>

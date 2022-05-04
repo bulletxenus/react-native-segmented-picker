@@ -211,7 +211,7 @@ React.createElement(View, {
 /*#__PURE__*/
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,
-  onPress: onConfirm,
+  onPress: onClose,
   testID: TEST_IDS.CONFIRM_BUTTON
 },
 /*#__PURE__*/
@@ -223,11 +223,11 @@ React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
     color: confirmTextColor
   }]
-}, confirmText))),
+}, "x"))),
 /*#__PURE__*/
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,
-  onPress: onClose,
+  onPress: onConfirm,
   testID: TEST_IDS.CONFIRM_BUTTON
 },
 /*#__PURE__*/
