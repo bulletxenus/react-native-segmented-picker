@@ -1096,7 +1096,7 @@ class SegmentedPicker extends Component {
       /*#__PURE__*/
       React.createElement(View, {
         style: [styles.closeableContainer, {
-          height: `${100 - size * 100}%`
+          height: `${20}%`
         }]
       })),
       /*#__PURE__*/
@@ -1117,7 +1117,7 @@ class SegmentedPicker extends Component {
         duration: ANIMATION_TIME,
         ref: this.pickerContainerRef,
         style: [styles.pickerContainer, {
-          height: `${(size - 0.15) * 100}%`,
+          height: `${60}%`,
           backgroundColor
         }]
       },
@@ -1220,7 +1220,18 @@ class SegmentedPicker extends Component {
           android: undefined
         }),
         testID: `${columnTestID}`
-      }))))))))))
+      })))))))),
+      /*#__PURE__*/
+      React.createElement(TouchableWithoutFeedback, {
+        onPress: this.onCancel,
+        testID: TEST_IDS.CLOSE_AREA
+      },
+      /*#__PURE__*/
+      React.createElement(View, {
+        style: [styles.closeableContainer, {
+          height: `${20}%`
+        }]
+      }))))
     );
   }
 
