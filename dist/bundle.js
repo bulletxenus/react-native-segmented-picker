@@ -116,8 +116,7 @@ var styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'flex-start',
-    marginBottom: '15%'
+    alignItems: 'flex-start'
   },
   selectableArea: {
     flex: 1,
@@ -1118,7 +1117,7 @@ class SegmentedPicker extends Component {
         duration: ANIMATION_TIME,
         ref: this.pickerContainerRef,
         style: [styles.pickerContainer, {
-          height: `${size * 100}%`,
+          height: `${(size - 0.15) * 100}%`,
           backgroundColor
         }]
       },
