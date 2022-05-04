@@ -15,7 +15,8 @@ export default StyleSheet.create({
   toolbarConfirmContainer: {
     height: '100%',
     paddingLeft: 30,
-    justifyContent: 'center',
+    // justifyContent: 'center',
+    alignItems: 'center',
   },
 
   toolbarConfirmText: {

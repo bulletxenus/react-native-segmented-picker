@@ -11,7 +11,7 @@ declare const _default: {
     toolbarConfirmContainer: {
         height: string;
         paddingLeft: number;
-        justifyContent: "center";
+        alignItems: "center";
     };
     toolbarConfirmText: {
         fontWeight: "bold";
