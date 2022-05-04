@@ -11,10 +11,14 @@ export default StyleSheet.create({
     alignSelf: 'flex-start',
   },
 
-  toolbarConfirmContainer: {
-    height: '100%',
+  toolbarTitleContainer: {
+    height: '80%',
     paddingLeft: 30,
     justifyContent: 'center',
+  },
+
+  closeButton: {
+    width: '10%',
   },
 
   toolbarConfirmText: {

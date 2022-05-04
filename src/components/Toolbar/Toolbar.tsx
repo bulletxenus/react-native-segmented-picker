@@ -41,7 +41,7 @@ export default ({
       onPress={onClose}
       testID={TEST_IDS.CONFIRM_BUTTON}
     >
-      <View style={styles.toolbarConfirmContainer}>
+      <View style={styles.closeButton}>
         <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, fontSize: 25 }]}>
           x
         </Text>
@@ -52,8 +52,8 @@ export default ({
       onPress={onConfirm}
       testID={TEST_IDS.CONFIRM_BUTTON}
     >
-      <View style={styles.toolbarConfirmContainer}>
-        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor }]}>
+      <View style={styles.toolbarTitleContainer}>
+        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, textAlign: 'center' }]}>
           {titleText}
         </Text>
       </View>

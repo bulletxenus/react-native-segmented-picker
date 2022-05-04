@@ -174,10 +174,13 @@ var styles$1 = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'flex-start'
   },
-  toolbarConfirmContainer: {
-    height: '100%',
+  toolbarTitleContainer: {
+    height: '80%',
     paddingLeft: 30,
     justifyContent: 'center'
+  },
+  closeButton: {
+    width: '10%'
   },
   toolbarConfirmText: {
     fontWeight: 'bold',
@@ -218,7 +221,7 @@ React.createElement(TouchableOpacity, {
 },
 /*#__PURE__*/
 React.createElement(View, {
-  style: styles$1.toolbarConfirmContainer
+  style: styles$1.closeButton
 },
 /*#__PURE__*/
 React.createElement(Text, {
@@ -235,12 +238,13 @@ React.createElement(TouchableOpacity, {
 },
 /*#__PURE__*/
 React.createElement(View, {
-  style: styles$1.toolbarConfirmContainer
+  style: styles$1.toolbarTitleContainer
 },
 /*#__PURE__*/
 React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
-    color: confirmTextColor
+    color: confirmTextColor,
+    textAlign: 'center'
   }]
 }, titleText)))));
 

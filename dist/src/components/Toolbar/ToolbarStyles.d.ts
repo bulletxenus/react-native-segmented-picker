@@ -7,10 +7,13 @@ declare const _default: {
         alignItems: "center";
         alignSelf: "flex-start";
     };
-    toolbarConfirmContainer: {
+    toolbarTitleContainer: {
         height: string;
         paddingLeft: number;
         justifyContent: "center";
+    };
+    closeButton: {
+        width: string;
     };
     toolbarConfirmText: {
         fontWeight: "bold";
