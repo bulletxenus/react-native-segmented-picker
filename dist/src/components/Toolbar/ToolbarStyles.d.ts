@@ -4,7 +4,7 @@ declare const _default: {
         height: number;
         borderBottomWidth: number;
         flexDirection: "row";
-        justifyContent: "flex-end";
+        justifyContent: "space-between";
         alignItems: "center";
         alignSelf: "flex-start";
     };

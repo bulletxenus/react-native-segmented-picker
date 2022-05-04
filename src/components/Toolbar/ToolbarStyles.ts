@@ -7,7 +7,7 @@ export default StyleSheet.create({
     height: 42,
     borderBottomWidth: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'flex-start',
   },

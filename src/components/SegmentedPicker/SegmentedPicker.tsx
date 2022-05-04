@@ -598,7 +598,7 @@ export default class SegmentedPicker extends Component<Props, State> {
             numberOfLines={1}
             style={[styles.pickerItemText, { color: pickerItemTextColor }]}
           >
-            chicen nuggets
+            {label}
           </Text>
         </TouchableOpacity>
       </View>

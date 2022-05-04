@@ -167,7 +167,7 @@ var styles$1 = StyleSheet.create({
     height: 42,
     borderBottomWidth: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'flex-start'
   },
@@ -205,6 +205,22 @@ React.createElement(View, {
     borderBottomColor: toolbarBorderColor
   }]
 },
+/*#__PURE__*/
+React.createElement(TouchableOpacity, {
+  activeOpacity: 0.4,
+  onPress: onConfirm,
+  testID: TEST_IDS.CONFIRM_BUTTON
+},
+/*#__PURE__*/
+React.createElement(View, {
+  style: styles$1.toolbarConfirmContainer
+},
+/*#__PURE__*/
+React.createElement(Text, {
+  style: [styles$1.toolbarConfirmText, {
+    color: confirmTextColor
+  }]
+}, confirmText))),
 /*#__PURE__*/
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,
@@ -950,7 +966,7 @@ class SegmentedPicker extends Component {
           style: [styles.pickerItemText, {
             color: pickerItemTextColor
           }]
-        }, "chicen nuggets")))
+        }, label)))
       );
     };
     /**
