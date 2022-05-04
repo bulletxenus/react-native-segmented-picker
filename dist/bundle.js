@@ -241,8 +241,69 @@ React.createElement(Text, {
   }]
 }, confirmText)))));
 
-const ITEM_HEIGHT$1 = Platform.select(ITEM_HEIGHTS);
 var styles$2 = StyleSheet.create({
+  toolbarContainer: {
+    width: '100%',
+    height: 42,
+    borderBottomWidth: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    alignSelf: 'flex-start'
+  },
+  toolbarConfirmContainer: {
+    height: '100%',
+    paddingLeft: 30,
+    justifyContent: 'center'
+  },
+  toolbarConfirmText: {
+    fontWeight: 'bold',
+    fontSize: 15,
+    paddingTop: 0,
+    paddingRight: GUTTER_WIDTH,
+    paddingBottom: TEXT_CORRECTION,
+    paddingLeft: 0
+  }
+});
+
+/**
+ * Top action bar that displays above the picker modal which allows a user to confirm
+ * their selections and close the modal.
+ */
+
+var Bottombar = (({
+  confirmText,
+  confirmTextColor,
+  toolbarBackground,
+  toolbarBorderColor,
+  onConfirm
+}) =>
+/*#__PURE__*/
+React.createElement(View, {
+  style: [styles$2.toolbarContainer, {
+    backgroundColor: toolbarBackground,
+    borderBottomColor: toolbarBorderColor
+  }]
+},
+/*#__PURE__*/
+React.createElement(TouchableOpacity, {
+  activeOpacity: 0.4,
+  onPress: onConfirm,
+  testID: TEST_IDS.CONFIRM_BUTTON
+},
+/*#__PURE__*/
+React.createElement(View, {
+  style: styles$2.toolbarConfirmContainer
+},
+/*#__PURE__*/
+React.createElement(Text, {
+  style: [styles$2.toolbarConfirmText, {
+    color: confirmTextColor
+  }]
+}, "Bottom Bar")))));
+
+const ITEM_HEIGHT$1 = Platform.select(ITEM_HEIGHTS);
+var styles$3 = StyleSheet.create({
   selectionMarkerContainer: {
     width: '100%',
     height: '100%',
@@ -279,23 +340,23 @@ var SelectionMarker = (({
 }) =>
 /*#__PURE__*/
 React.createElement(View, {
-  style: styles$2.selectionMarkerContainer
+  style: styles$3.selectionMarkerContainer
 },
 /*#__PURE__*/
 React.createElement(View, {
-  style: [styles$2.selectionMarkerBorder, {
+  style: [styles$3.selectionMarkerBorder, {
     backgroundColor: borderColor
   }]
 }),
 /*#__PURE__*/
 React.createElement(View, {
-  style: [styles$2.selectionMarker, {
+  style: [styles$3.selectionMarker, {
     backgroundColor
   }]
 }),
 /*#__PURE__*/
 React.createElement(View, {
-  style: [styles$2.selectionMarkerBorder, {
+  style: [styles$3.selectionMarkerBorder, {
     backgroundColor: borderColor
   }]
 })));
@@ -1220,7 +1281,16 @@ class SegmentedPicker extends Component {
           android: undefined
         }),
         testID: `${columnTestID}`
-      })))))))),
+      }))))))),
+      /*#__PURE__*/
+      React.createElement(Bottombar, {
+        confirmText: confirmText,
+        confirmTextColor: confirmTextColor,
+        toolbarBackground: toolbarBackgroundColor,
+        toolbarBorderColor: toolbarBorderColor,
+        onConfirm: this.onConfirm,
+        onClose: this.onClose
+      })),
       /*#__PURE__*/
       React.createElement(TouchableWithoutFeedback, {
         onPress: this.onCancel,

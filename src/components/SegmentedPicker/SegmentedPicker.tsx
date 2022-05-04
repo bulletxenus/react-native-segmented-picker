@@ -14,6 +14,7 @@ import * as Animatable from 'react-native-animatable';
 import { defaultProps, propTypes } from './SegmentedPickerPropTypes';
 import styles from './SegmentedPickerStyles';
 import Toolbar from '../Toolbar';
+import BottomBar from '../BottomBar';
 import SelectionMarker from '../SelectionMarker';
 import UIPicker from '../UIPicker';
 import Cache from '../../services/Cache';
@@ -692,7 +693,6 @@ export default class SegmentedPicker extends Component<Props, State> {
               toolbarBorderColor={toolbarBorderColor}
               onConfirm={this.onConfirm}
               onClose={this.onClose}
-
             />
 
             <View style={styles.selectableArea}>
@@ -782,6 +782,14 @@ export default class SegmentedPicker extends Component<Props, State> {
                 </>
               )}
             </View>
+            <BottomBar
+              confirmText={confirmText}
+              confirmTextColor={confirmTextColor}
+              toolbarBackground={toolbarBackgroundColor}
+              toolbarBorderColor={toolbarBorderColor}
+              onConfirm={this.onConfirm}
+              onClose={this.onClose}
+            />
           </Animatable.View>
           <TouchableWithoutFeedback onPress={this.onCancel} testID={TEST_IDS.CLOSE_AREA}>
             <View style={[styles.closeableContainer, { height: `${20}%` }]} />
