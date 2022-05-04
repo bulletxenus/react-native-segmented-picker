@@ -670,7 +670,7 @@ export default class SegmentedPicker extends Component<Props, State> {
           testID={TEST_IDS.PICKER}
         >
           <TouchableWithoutFeedback onPress={this.onCancel} testID={TEST_IDS.CLOSE_AREA}>
-            <View style={[styles.closeableContainer, { height: `${(100 - (size * 100))}%` }]} />
+            <View style={[styles.closeableContainer, { height: `${(100 - (size * 100)) / 2}%` }]} />
           </TouchableWithoutFeedback>
 
           <Animatable.View

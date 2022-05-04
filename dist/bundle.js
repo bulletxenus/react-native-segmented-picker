@@ -1096,7 +1096,7 @@ class SegmentedPicker extends Component {
       /*#__PURE__*/
       React.createElement(View, {
         style: [styles.closeableContainer, {
-          height: `${100 - size * 100}%`
+          height: `${(100 - size * 100) / 2}%`
         }]
       })),
       /*#__PURE__*/
