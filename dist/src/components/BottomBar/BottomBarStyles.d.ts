@@ -17,9 +17,6 @@ declare const _default: {
         fontWeight: "bold";
         fontSize: number;
         paddingTop: number;
-        paddingRight: number;
-        paddingBottom: number;
-        paddingLeft: number;
     };
 };
 export default _default;

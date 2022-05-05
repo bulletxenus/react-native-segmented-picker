@@ -40,23 +40,18 @@ export default ({
       activeOpacity={0.4}
       onPress={onClose}
       testID={TEST_IDS.CONFIRM_BUTTON}
+      style={styles.closeButton}
     >
-      <View style={styles.closeButton}>
+      <View>
         <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, fontSize: 25 }]}>
           x
         </Text>
       </View>
     </TouchableOpacity>
-    <TouchableOpacity
-      activeOpacity={0.4}
-      onPress={onConfirm}
-      testID={TEST_IDS.CONFIRM_BUTTON}
-    >
-      <View style={styles.toolbarTitleContainer}>
-        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor }]}>
-          {titleText}
-        </Text>
-      </View>
-    </TouchableOpacity>
+    <View style={styles.toolbarTitleContainer}>
+      <Text style={[styles.toolbarConfirmText, { color: confirmTextColor }]}>
+        {titleText}
+      </Text>
+    </View>
   </View>
 );

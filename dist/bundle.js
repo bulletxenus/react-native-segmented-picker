@@ -170,9 +170,7 @@ var styles$1 = StyleSheet.create({
     width: '100%',
     height: 42,
     borderBottomWidth: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'flex-start'
+    flexDirection: 'row'
   },
   toolbarTitleContainer: {
     width: '80%',
@@ -217,12 +215,11 @@ React.createElement(View, {
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,
   onPress: onClose,
-  testID: TEST_IDS.CONFIRM_BUTTON
-},
-/*#__PURE__*/
-React.createElement(View, {
+  testID: TEST_IDS.CONFIRM_BUTTON,
   style: styles$1.closeButton
 },
+/*#__PURE__*/
+React.createElement(View, null,
 /*#__PURE__*/
 React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
@@ -230,12 +227,6 @@ React.createElement(Text, {
     fontSize: 25
   }]
 }, "x"))),
-/*#__PURE__*/
-React.createElement(TouchableOpacity, {
-  activeOpacity: 0.4,
-  onPress: onConfirm,
-  testID: TEST_IDS.CONFIRM_BUTTON
-},
 /*#__PURE__*/
 React.createElement(View, {
   style: styles$1.toolbarTitleContainer
@@ -245,7 +236,7 @@ React.createElement(Text, {
   style: [styles$1.toolbarConfirmText, {
     color: confirmTextColor
   }]
-}, titleText)))));
+}, titleText))));
 
 var styles$2 = StyleSheet.create({
   toolbarContainer: {
@@ -266,10 +257,7 @@ var styles$2 = StyleSheet.create({
   toolbarConfirmText: {
     fontWeight: 'bold',
     fontSize: 15,
-    paddingTop: 0,
-    paddingRight: GUTTER_WIDTH,
-    paddingBottom: TEXT_CORRECTION,
-    paddingLeft: 0
+    paddingTop: 10
   }
 });
 

@@ -4,8 +4,6 @@ declare const _default: {
         height: number;
         borderBottomWidth: number;
         flexDirection: "row";
-        alignItems: "center";
-        alignSelf: "flex-start";
     };
     toolbarTitleContainer: {
         width: string;

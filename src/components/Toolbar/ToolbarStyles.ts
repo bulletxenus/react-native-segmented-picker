@@ -7,8 +7,6 @@ export default StyleSheet.create({
     height: 42,
     borderBottomWidth: 1,
     flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'flex-start',
   },
 
   toolbarTitleContainer: {
