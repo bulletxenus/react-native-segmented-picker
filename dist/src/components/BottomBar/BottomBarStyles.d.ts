@@ -9,8 +9,7 @@ declare const _default: {
         alignSelf: "flex-start";
     };
     toolbarConfirmContainer: {
-        height: string;
-        paddingLeft: number;
+        width: string;
         alignItems: "center";
     };
     toolbarConfirmText: {

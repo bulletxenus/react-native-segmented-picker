@@ -13,9 +13,7 @@ export default StyleSheet.create({
   },
 
   toolbarConfirmContainer: {
-    height: '100%',
-    paddingLeft: 30,
-    // justifyContent: 'center',
+    width: '100%',
     alignItems: 'center',
   },
 

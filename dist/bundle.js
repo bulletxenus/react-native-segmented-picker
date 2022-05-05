@@ -246,9 +246,7 @@ var styles$2 = StyleSheet.create({
     alignSelf: 'flex-start'
   },
   toolbarConfirmContainer: {
-    height: '100%',
-    paddingLeft: 30,
-    // justifyContent: 'center',
+    width: '100%',
     alignItems: 'center'
   },
   toolbarConfirmText: {
