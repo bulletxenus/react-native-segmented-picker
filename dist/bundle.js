@@ -1135,7 +1135,9 @@ class SegmentedPicker extends Component {
         easing: "ease-out-cubic",
         duration: ANIMATION_TIME,
         ref: this.modalContainerRef,
-        style: styles.modalContainer,
+        style: [styles.modalContainer, {
+          borderRadius: 10
+        }],
         testID: TEST_IDS.PICKER
       },
       /*#__PURE__*/

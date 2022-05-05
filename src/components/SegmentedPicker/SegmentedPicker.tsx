@@ -669,7 +669,7 @@ export default class SegmentedPicker extends Component<Props, State> {
           easing="ease-out-cubic"
           duration={ANIMATION_TIME}
           ref={this.modalContainerRef}
-          style={styles.modalContainer}
+          style={[styles.modalContainer, {borderRadius: 10}]}
           testID={TEST_IDS.PICKER}
         >
           <TouchableWithoutFeedback onPress={this.onCancel} testID={TEST_IDS.CLOSE_AREA}>
