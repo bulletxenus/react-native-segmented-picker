@@ -22,11 +22,6 @@ export default StyleSheet.create({
   },
 
   toolbarConfirmText: {
-    fontWeight: 'bold',
     fontSize: 15,
-    paddingTop: 0,
-    paddingRight: GUTTER_WIDTH,
-    paddingBottom: TEXT_CORRECTION,
-    paddingLeft: 0,
   },
 });

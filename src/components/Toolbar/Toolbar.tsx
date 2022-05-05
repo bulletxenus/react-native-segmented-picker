@@ -36,9 +36,6 @@ export default ({
       },
     ]}
   >
-    <Text>
-      color: {toolbarBackground}
-    </Text>
     <TouchableOpacity
       activeOpacity={0.4}
       onPress={onClose}
