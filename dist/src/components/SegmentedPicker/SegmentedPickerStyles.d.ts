@@ -2,6 +2,7 @@ declare const _default: {
     modalContainer: {
         width: string;
         height: string;
+        paddingHorizontal: string;
         backgroundColor: string;
         flex: number;
         flexDirection: "column";
@@ -11,7 +12,6 @@ declare const _default: {
     };
     pickerContainer: {
         width: string;
-        paddingHorizontal: string;
         flex: number;
         flexDirection: "column";
         alignItems: "flex-start";
