@@ -6,6 +6,7 @@ declare const _default: {
         backgroundColor: string;
         flex: number;
         flexDirection: "column";
+        borderRadius: number;
     };
     closeableContainer: {
         width: string;

@@ -110,7 +110,8 @@ var styles = StyleSheet.create({
     paddingHorizontal: '10%',
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
     flex: 1,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    borderRadius: 10
   },
   closeableContainer: {
     width: '100%'
