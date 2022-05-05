@@ -247,12 +247,12 @@ var styles$2 = StyleSheet.create({
   },
   toolbarConfirmContainer: {
     width: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingTop: 10
   },
   toolbarConfirmText: {
     fontWeight: 'bold',
-    fontSize: 15,
-    paddingTop: 10
+    fontSize: 15
   }
 });
 
@@ -278,10 +278,7 @@ React.createElement(View, {
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,
   onPress: onConfirm,
-  testID: TEST_IDS.CONFIRM_BUTTON
-},
-/*#__PURE__*/
-React.createElement(View, {
+  testID: TEST_IDS.CONFIRM_BUTTON,
   style: styles$2.toolbarConfirmContainer
 },
 /*#__PURE__*/
@@ -289,7 +286,7 @@ React.createElement(Text, {
   style: [styles$2.toolbarConfirmText, {
     color: '#0A84FF'
   }]
-}, confirmText)))));
+}, confirmText))));
 
 const ITEM_HEIGHT$1 = Platform.select(ITEM_HEIGHTS);
 var styles$3 = StyleSheet.create({

@@ -11,11 +11,11 @@ declare const _default: {
     toolbarConfirmContainer: {
         width: string;
         alignItems: "center";
+        paddingTop: number;
     };
     toolbarConfirmText: {
         fontWeight: "bold";
         fontSize: number;
-        paddingTop: number;
     };
 };
 export default _default;

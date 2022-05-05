@@ -15,11 +15,11 @@ export default StyleSheet.create({
   toolbarConfirmContainer: {
     width: '100%',
     alignItems: 'center',
+    paddingTop: 10,
   },
 
   toolbarConfirmText: {
     fontWeight: 'bold',
     fontSize: 15,
-    paddingTop: 10,
   },
 });
