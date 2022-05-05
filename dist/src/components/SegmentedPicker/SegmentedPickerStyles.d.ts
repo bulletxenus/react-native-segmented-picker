@@ -11,6 +11,7 @@ declare const _default: {
     };
     pickerContainer: {
         width: string;
+        paddingHorizontal: string;
         flex: number;
         flexDirection: "column";
         alignItems: "flex-start";

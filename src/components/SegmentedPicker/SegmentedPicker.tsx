@@ -673,7 +673,7 @@ export default class SegmentedPicker extends Component<Props, State> {
           testID={TEST_IDS.PICKER}
         >
           <TouchableWithoutFeedback onPress={this.onCancel} testID={TEST_IDS.CLOSE_AREA}>
-            <View style={[styles.closeableContainer, { height: `${20}%` }]} />
+            <View style={[styles.closeableContainer, { height: `${25}%` }]} />
           </TouchableWithoutFeedback>
 
           <Animatable.View
@@ -686,7 +686,7 @@ export default class SegmentedPicker extends Component<Props, State> {
             delay={100}
             duration={ANIMATION_TIME}
             ref={this.pickerContainerRef}
-            style={[styles.pickerContainer, { height: `${60}%`, backgroundColor }]}
+            style={[styles.pickerContainer, { height: `${50}%`, backgroundColor }]}
           >
             <Toolbar
               confirmText={confirmText}
@@ -794,7 +794,7 @@ export default class SegmentedPicker extends Component<Props, State> {
             />
           </Animatable.View>
           <TouchableWithoutFeedback onPress={this.onCancel} testID={TEST_IDS.CLOSE_AREA}>
-            <View style={[styles.closeableContainer, { height: `${20}%` }]} />
+            <View style={[styles.closeableContainer, { height: `${25}%` }]} />
           </TouchableWithoutFeedback>
         </Animatable.View>
       </Modal>
