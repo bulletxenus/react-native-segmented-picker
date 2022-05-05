@@ -111,7 +111,7 @@ var styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
     flex: 1,
     flexDirection: 'column',
-    borderRadius: 10
+    borderRadius: 100
   },
   closeableContainer: {
     width: '100%'
@@ -1146,7 +1146,7 @@ class SegmentedPicker extends Component {
       /*#__PURE__*/
       React.createElement(View, {
         style: [styles.closeableContainer, {
-          height: `${25}%`
+          height: `${22.5}%`
         }]
       })),
       /*#__PURE__*/
@@ -1167,7 +1167,7 @@ class SegmentedPicker extends Component {
         duration: ANIMATION_TIME,
         ref: this.pickerContainerRef,
         style: [styles.pickerContainer, {
-          height: `${50}%`,
+          height: `${55}%`,
           backgroundColor
         }]
       },
@@ -1288,7 +1288,7 @@ class SegmentedPicker extends Component {
       /*#__PURE__*/
       React.createElement(View, {
         style: [styles.closeableContainer, {
-          height: `${25}%`
+          height: `${22.5}%`
         }]
       }))))
     );
