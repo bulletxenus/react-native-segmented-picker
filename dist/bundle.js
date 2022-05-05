@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Dimensions, Platform, View, TouchableOpacity, Text, requireNativeComponent, UIManager, findNodeHandle, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
+import { StyleSheet, Dimensions, Platform, View, Text, TouchableOpacity, requireNativeComponent, UIManager, findNodeHandle, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
 import { View as View$1 } from 'react-native-animatable';
 import PropTypes from 'prop-types';
 
@@ -213,6 +213,8 @@ React.createElement(View, {
     borderBottomColor: toolbarBorderColor
   }]
 },
+/*#__PURE__*/
+React.createElement(Text, null, "color: ", toolbarBackground),
 /*#__PURE__*/
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,
