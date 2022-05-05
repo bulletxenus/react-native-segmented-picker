@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Dimensions, Platform, View, Text, TouchableOpacity, requireNativeComponent, UIManager, findNodeHandle, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
+import { StyleSheet, Dimensions, Platform, View, TouchableOpacity, Text, requireNativeComponent, UIManager, findNodeHandle, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
 import { View as View$1 } from 'react-native-animatable';
 import PropTypes from 'prop-types';
 
@@ -183,12 +183,7 @@ var styles$1 = StyleSheet.create({
     paddingLeft: '5%'
   },
   toolbarConfirmText: {
-    fontWeight: 'bold',
-    fontSize: 15,
-    paddingTop: 0,
-    paddingRight: GUTTER_WIDTH,
-    paddingBottom: TEXT_CORRECTION,
-    paddingLeft: 0
+    fontSize: 15
   }
 });
 
@@ -213,8 +208,6 @@ React.createElement(View, {
     borderBottomColor: toolbarBorderColor
   }]
 },
-/*#__PURE__*/
-React.createElement(Text, null, "color: ", toolbarBackground),
 /*#__PURE__*/
 React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,

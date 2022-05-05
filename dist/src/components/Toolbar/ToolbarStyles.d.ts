@@ -16,12 +16,7 @@ declare const _default: {
         paddingLeft: string;
     };
     toolbarConfirmText: {
-        fontWeight: "bold";
         fontSize: number;
-        paddingTop: number;
-        paddingRight: number;
-        paddingBottom: number;
-        paddingLeft: number;
     };
 };
 export default _default;
