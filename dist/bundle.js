@@ -178,8 +178,7 @@ var styles$1 = StyleSheet.create({
   },
   closeButton: {
     width: '10%',
-    paddingLeft: '5%',
-    paddingTop: 15
+    paddingLeft: '5%'
   },
   toolbarConfirmText: {
     fontWeight: 'bold',
