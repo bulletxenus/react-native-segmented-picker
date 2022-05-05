@@ -7,15 +7,17 @@ export default StyleSheet.create({
     height: 42,
     borderBottomWidth: 1,
     flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
   },
 
   toolbarTitleContainer: {
-    width: '70%',
+    width: '80%',
     alignItems: 'center',
   },
 
   closeButton: {
-    width: '10%',
+    width: '20%',
     paddingLeft: '5%',
   },
 

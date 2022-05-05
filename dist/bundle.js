@@ -170,14 +170,16 @@ var styles$1 = StyleSheet.create({
     width: '100%',
     height: 42,
     borderBottomWidth: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start'
   },
   toolbarTitleContainer: {
-    width: '70%',
+    width: '80%',
     alignItems: 'center'
   },
   closeButton: {
-    width: '10%',
+    width: '20%',
     paddingLeft: '5%'
   },
   toolbarConfirmText: {
