@@ -12,6 +12,7 @@ declare const _default: {
     closeButton: {
         width: string;
         paddingLeft: string;
+        paddingTop: string;
     };
     toolbarConfirmText: {
         fontWeight: "bold";

@@ -10,13 +10,14 @@ export default StyleSheet.create({
   },
 
   toolbarTitleContainer: {
-    width: '80%',
+    width: '70%',
     alignItems: 'center',
   },
 
   closeButton: {
-    width: '20%',
+    width: '10%',
     paddingLeft: '5%',
+    paddingTop: '5%',
   },
 
   toolbarConfirmText: {

@@ -43,7 +43,7 @@ export default ({
       style={styles.closeButton}
     >
       <View>
-        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, fontSize: 25 }]}>
+        <Text style={[styles.toolbarConfirmText, { color: confirmTextColor, fontSize: 30 }]}>
           x
         </Text>
       </View>
