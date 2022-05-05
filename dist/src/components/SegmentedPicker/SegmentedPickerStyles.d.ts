@@ -2,7 +2,6 @@ declare const _default: {
     modalContainer: {
         width: string;
         height: string;
-        paddingHorizontal: string;
         backgroundColor: string;
         flex: number;
         flexDirection: "column";

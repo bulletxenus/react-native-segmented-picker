@@ -12,7 +12,7 @@ export default StyleSheet.create({
   modalContainer: {
     width: '100%',
     height: '100%',
-    paddingHorizontal: '10%',
+    // paddingHorizontal: '10%',
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
     flex: 1,
     flexDirection: 'column',
