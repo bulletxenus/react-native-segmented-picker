@@ -6,6 +6,8 @@ declare const _default: {
         flexDirection: "row";
         alignItems: "center";
         alignSelf: "flex-start";
+        borderTopRightRadius: number;
+        borderTopLeftRadius: number;
     };
     toolbarTitleContainer: {
         width: string;

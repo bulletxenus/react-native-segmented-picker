@@ -27,7 +27,7 @@ export default ({
       styles.toolbarContainer,
       {
         backgroundColor: toolbarBackground,
-        borderBottomColor: toolbarBorderColor,
+        borderColor: toolbarBorderColor,
       },
     ]}
   >
@@ -35,9 +35,9 @@ export default ({
       activeOpacity={0.4}
       onPress={onConfirm}
       testID={TEST_IDS.CONFIRM_BUTTON}
-      style={styles.toolbarConfirmContainer}
+      style={[styles.toolbarConfirmContainer]}
     >
-      <Text style={[styles.toolbarConfirmText, { color: '#0A84FF' }]}>
+      <Text style={[styles.toolbarConfirmText, { color: '#5f85bc' }]}>
         {confirmText}
       </Text>
     </TouchableOpacity>

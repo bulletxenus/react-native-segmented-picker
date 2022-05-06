@@ -9,6 +9,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     alignSelf: 'flex-start',
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10,
   },
 
   toolbarTitleContainer: {
@@ -22,6 +24,6 @@ export default StyleSheet.create({
   },
 
   toolbarConfirmText: {
-    fontSize: 15,
+    fontSize: 18,
   },
 });

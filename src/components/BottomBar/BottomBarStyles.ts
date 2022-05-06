@@ -5,21 +5,22 @@ export default StyleSheet.create({
   toolbarContainer: {
     width: '100%',
     height: 42,
-    borderBottomWidth: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'flex-start',
+    borderTopWidth: 1,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
   },
 
   toolbarConfirmContainer: {
     width: '100%',
     alignItems: 'center',
-    paddingTop: 10,
   },
 
   toolbarConfirmText: {
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 18,
   },
 });

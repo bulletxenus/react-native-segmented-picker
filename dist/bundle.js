@@ -107,11 +107,10 @@ var styles = StyleSheet.create({
   modalContainer: {
     width: '100%',
     height: '100%',
-    // paddingHorizontal: '10%',
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
     flex: 1,
     flexDirection: 'column',
-    borderRadius: 100
+    padding: '8%'
   },
   closeableContainer: {
     width: '100%'
@@ -174,7 +173,9 @@ var styles$1 = StyleSheet.create({
     borderBottomWidth: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    alignSelf: 'flex-start'
+    alignSelf: 'flex-start',
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10
   },
   toolbarTitleContainer: {
     width: '80%',
@@ -185,7 +186,7 @@ var styles$1 = StyleSheet.create({
     paddingLeft: '5%'
   },
   toolbarConfirmText: {
-    fontSize: 15
+    fontSize: 18
   }
 });
 
@@ -241,20 +242,21 @@ var styles$2 = StyleSheet.create({
   toolbarContainer: {
     width: '100%',
     height: 42,
-    borderBottomWidth: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    alignSelf: 'flex-start'
+    alignSelf: 'flex-start',
+    borderTopWidth: 1,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10
   },
   toolbarConfirmContainer: {
     width: '100%',
-    alignItems: 'center',
-    paddingTop: 10
+    alignItems: 'center'
   },
   toolbarConfirmText: {
     fontWeight: 'bold',
-    fontSize: 15
+    fontSize: 18
   }
 });
 
@@ -273,7 +275,7 @@ var Bottombar = (({
 React.createElement(View, {
   style: [styles$2.toolbarContainer, {
     backgroundColor: toolbarBackground,
-    borderBottomColor: toolbarBorderColor
+    borderColor: toolbarBorderColor
   }]
 },
 /*#__PURE__*/
@@ -281,12 +283,12 @@ React.createElement(TouchableOpacity, {
   activeOpacity: 0.4,
   onPress: onConfirm,
   testID: TEST_IDS.CONFIRM_BUTTON,
-  style: styles$2.toolbarConfirmContainer
+  style: [styles$2.toolbarConfirmContainer]
 },
 /*#__PURE__*/
 React.createElement(Text, {
   style: [styles$2.toolbarConfirmText, {
-    color: '#0A84FF'
+    color: '#5f85bc'
   }]
 }, confirmText))));
 
@@ -1135,9 +1137,7 @@ class SegmentedPicker extends Component {
         easing: "ease-out-cubic",
         duration: ANIMATION_TIME,
         ref: this.modalContainerRef,
-        style: [styles.modalContainer, {
-          borderRadius: 10
-        }],
+        style: [styles.modalContainer],
         testID: TEST_IDS.PICKER
       },
       /*#__PURE__*/
@@ -1170,7 +1170,9 @@ class SegmentedPicker extends Component {
         ref: this.pickerContainerRef,
         style: [styles.pickerContainer, {
           height: `${55}%`,
-          backgroundColor
+          backgroundColor,
+          borderRadius: 10,
+          marginRight: '8%'
         }]
       },
       /*#__PURE__*/
