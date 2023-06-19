@@ -1,10 +1,11 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import { View } from 'react-native';
 import styles from './SelectionMarkerStyles';
 
 interface Props {
   backgroundColor: string;
   borderColor: string;
+  SelectionComponent?: ReactNode;
 }
 
 /**
@@ -13,20 +14,25 @@ interface Props {
 export default ({
   backgroundColor,
   borderColor,
+  SelectionComponent,
 }: Props): ReactElement => (
   <View style={styles.selectionMarkerContainer}>
-    <View
-      style={[
-        styles.selectionMarkerBorder,
-        { backgroundColor: borderColor },
-      ]}
-    />
-    <View style={[styles.selectionMarker, { backgroundColor }]} />
-    <View
-      style={[
-        styles.selectionMarkerBorder,
-        { backgroundColor: borderColor },
-      ]}
-    />
+    {SelectionComponent || (
+    <>
+      <View
+        style={[
+          styles.selectionMarkerBorder,
+          { backgroundColor: borderColor },
+        ]}
+      />
+      <View style={[styles.selectionMarker, { backgroundColor }]} />
+      <View
+        style={[
+          styles.selectionMarkerBorder,
+          { backgroundColor: borderColor },
+        ]}
+      />
+    </>
+    )}
   </View>
 );

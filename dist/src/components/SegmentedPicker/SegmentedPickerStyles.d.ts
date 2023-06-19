@@ -8,6 +8,7 @@ declare const _default: {
         padding: string;
     };
     closeableContainer: {
+        flex: number;
         width: string;
     };
     pickerContainer: {
@@ -15,6 +16,7 @@ declare const _default: {
         flex: number;
         flexDirection: "column";
         alignItems: "flex-start";
+        overflow: "hidden";
     };
     selectableArea: {
         flex: number;
@@ -36,11 +38,11 @@ declare const _default: {
     pickerList: {
         width: string;
         height: string;
+        alignItems: "flex-start";
     };
     pickerItem: {
         width: string;
         height: number;
-        justifyContent: "center";
     };
     pickerItemText: {
         fontSize: number;
