@@ -1,4 +1,4 @@
-import React, { Component, ReactElement } from 'react';
+import React, { Component, ReactElement, ReactNode } from 'react';
 import {
   Platform,
   Modal,
@@ -8,7 +8,7 @@ import {
   View,
   Text,
   NativeSyntheticEvent,
-  NativeScrollEvent,
+  NativeScrollEvent, ViewStyle, TextStyle,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import { defaultProps, propTypes } from './SegmentedPickerPropTypes';
@@ -68,6 +68,12 @@ export interface Props {
   onCancel: (event: Selections) => void,
   onConfirm: (event: Selections) => void,
   onClose: () => void,
+  // custom
+  CustomBottomBar?: React.FC<{onConfirm: (event: Selections) => void}>,
+  CustomToolBar?: ReactNode,
+  SelectionComponent?: ReactNode,
+  columnStyles?: ViewStyle
+  itemTextStyle?: TextStyle
 }
 
 interface State {
@@ -239,9 +245,11 @@ export default class SegmentedPicker extends Component<Props, State> {
     }
     const { onValueChange } = this.props;
     const list = this.cache.get(`${FLAT_LIST_REF}${column}`);
+
     if (!list) {
       return;
     }
+
     list.scrollToIndex({
       index,
       animated,
@@ -604,7 +612,7 @@ export default class SegmentedPicker extends Component<Props, State> {
     item: RenderablePickerItem;
     index: number;
   }): ReactElement => {
-    const { pickerItemTextColor } = this.props;
+    const { pickerItemTextColor, itemTextStyle } = this.props;
     return (
       <View style={styles.pickerItem}>
         <TouchableOpacity
@@ -614,7 +622,7 @@ export default class SegmentedPicker extends Component<Props, State> {
         >
           <Text
             numberOfLines={1}
-            style={[styles.pickerItemText, { color: pickerItemTextColor }]}
+            style={[styles.pickerItemText, itemTextStyle || { color: pickerItemTextColor }]}
           >
             {label}
           </Text>
@@ -653,6 +661,10 @@ export default class SegmentedPicker extends Component<Props, State> {
       selectionBackgroundColor,
       selectionBorderColor,
       backgroundColor,
+      CustomBottomBar,
+      CustomToolBar,
+      SelectionComponent,
+      columnStyles,
     } = this.props;
 
     return (
@@ -675,7 +687,7 @@ export default class SegmentedPicker extends Component<Props, State> {
           testID={TEST_IDS.PICKER}
         >
           <TouchableWithoutFeedback onPress={this.onCancel} testID={TEST_IDS.CLOSE_AREA}>
-            <View style={[styles.closeableContainer, { height: `${22.5}%` }]} />
+            <View style={styles.closeableContainer} />
           </TouchableWithoutFeedback>
 
           <Animatable.View
@@ -688,8 +700,11 @@ export default class SegmentedPicker extends Component<Props, State> {
             delay={100}
             duration={ANIMATION_TIME}
             ref={this.pickerContainerRef}
-            style={[styles.pickerContainer, { height: `${55}%`, backgroundColor, borderRadius: 10, marginRight: '8%' }]}
+            style={[styles.pickerContainer, {
+              minHeight: `${size * 100}%`, backgroundColor, borderRadius: 10, marginRight: '8%',
+            }]}
           >
+            {CustomToolBar || (
             <Toolbar
               confirmText={confirmText}
               titleText={titleText}
@@ -699,6 +714,7 @@ export default class SegmentedPicker extends Component<Props, State> {
               onConfirm={this.onConfirm}
               onClose={this.onClose}
             />
+            )}
 
             <View style={styles.selectableArea}>
               {/* Native iOS Picker is enabled */}
@@ -726,6 +742,7 @@ export default class SegmentedPicker extends Component<Props, State> {
               {!this.isNative() && (
                 <>
                   <SelectionMarker
+                    SelectionComponent={SelectionComponent}
                     backgroundColor={selectionBackgroundColor}
                     borderColor={selectionBorderColor}
                   />
@@ -734,7 +751,7 @@ export default class SegmentedPicker extends Component<Props, State> {
                       { key: column, testID: columnTestID, flex },
                     ) => (
                       <View style={[styles.pickerColumn, { flex }]} key={`${column}`}>
-                        <View style={styles.pickerList}>
+                        <View style={[styles.pickerList, columnStyles]}>
                           <FlatList
                             data={this.columnItems(column).map(({
                               label,
@@ -787,16 +804,18 @@ export default class SegmentedPicker extends Component<Props, State> {
                 </>
               )}
             </View>
-            <BottomBar
-              confirmText={confirmText}
-              toolbarBackground={toolbarBackgroundColor}
-              toolbarBorderColor={toolbarBorderColor}
-              onConfirm={this.onConfirm}
-              onClose={this.onClose}
-            />
+            {CustomBottomBar ? <CustomBottomBar onConfirm={this.onConfirm} /> : (
+              <BottomBar
+                confirmText={confirmText}
+                toolbarBackground={toolbarBackgroundColor}
+                toolbarBorderColor={toolbarBorderColor}
+                onConfirm={this.onConfirm}
+                onClose={this.onClose}
+              />
+            )}
           </Animatable.View>
           <TouchableWithoutFeedback onPress={this.onCancel} testID={TEST_IDS.CLOSE_AREA}>
-            <View style={[styles.closeableContainer, { height: `${22.5}%` }]} />
+            <View style={styles.closeableContainer} />
           </TouchableWithoutFeedback>
         </Animatable.View>
       </Modal>

@@ -19,6 +19,7 @@ export default StyleSheet.create({
   },
 
   closeableContainer: {
+    flex: 1,
     width: '100%',
   },
 
@@ -27,6 +28,7 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'flex-start',
+    overflow: 'hidden',
   },
 
   selectableArea: {
@@ -37,7 +39,7 @@ export default StyleSheet.create({
   pickerColumns: {
     flex: 1,
     flexDirection: 'row',
-    paddingTop: GUTTER_HEIGHT,
+    paddingTop: GUTTER_HEIGHT * 2.2,
     paddingRight: 0,
     paddingBottom: GUTTER_HEIGHT,
     paddingLeft: GUTTER_WIDTH,
@@ -52,12 +54,12 @@ export default StyleSheet.create({
   pickerList: {
     width: '100%',
     height: 'auto',
+    alignItems: 'flex-start',
   },
 
   pickerItem: {
     width: '100%',
     height: ITEM_HEIGHT,
-    justifyContent: 'center',
   },
 
   pickerItemText: {
