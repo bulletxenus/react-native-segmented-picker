@@ -245,7 +245,7 @@ export default class SegmentedPicker extends Component<Props, State> {
     }
     const { onValueChange } = this.props;
     const list = this.cache.get(`${FLAT_LIST_REF}${column}`);
-    // console.log(list)
+
     if (!list) {
       return;
     }
