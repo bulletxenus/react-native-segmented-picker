@@ -773,6 +773,7 @@ class SegmentedPicker extends Component {
 
           options.filter(column => !Object.keys(defaultSelections).includes(column.key) && this.columnItems(column.key).length > 0).forEach(column => this.selectIndex(0, column.key, false, false));
         }, 0);
+        this.cache.set(IS_DIRTY, true);
       }
     };
     /**

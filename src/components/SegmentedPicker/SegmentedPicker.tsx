@@ -380,6 +380,8 @@ export default class SegmentedPicker extends Component<Props, State> {
             this.selectIndex(0, column.key, false, false)
           ));
       }, 0);
+
+      this.cache.set(IS_DIRTY, true);
     }
   };
 
