@@ -120,7 +120,8 @@ var styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    overflow: 'hidden'
   },
   selectableArea: {
     flex: 1,
@@ -646,7 +647,7 @@ class SegmentedPicker extends Component {
       const {
         onValueChange
       } = this.props;
-      const list = this.cache.get(`${FLAT_LIST_REF}${column}`); // console.log(list)
+      const list = this.cache.get(`${FLAT_LIST_REF}${column}`);
 
       if (!list) {
         return;

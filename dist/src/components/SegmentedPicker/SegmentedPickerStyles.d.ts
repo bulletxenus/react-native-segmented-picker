@@ -16,6 +16,7 @@ declare const _default: {
         flex: number;
         flexDirection: "column";
         alignItems: "flex-start";
+        overflow: "hidden";
     };
     selectableArea: {
         flex: number;
